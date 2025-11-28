@@ -294,7 +294,7 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Avaliação Projeto Integador 2025</Text>
+        <Text style={styles.headerTitle}>Avaliação Projeto Integador</Text>
       </View>
       
       <ScrollView contentContainerStyle={styles.scrollContent}>
@@ -317,19 +317,41 @@ export default function App() {
             onValueChange={(itemValue) => setTurma(itemValue)}
           >
             <Picker.Item label="Selecione..." value="" />
-            <Picker.Item label="1 e 2 Ano" value="1e2" />
-            <Picker.Item label="3 Ano" value="3" />
+            <Picker.Item label="1 e 2 Ano" value="t1e2" />
+            <Picker.Item label="3 Ano" value="t3" />
           </Picker>
         </View>
          <View style={styles.card}>
             <Text style={styles.cardTitle}>Grupo</Text>
-            <TextInput
+            {/* <TextInput
                 style={styles.input}
                 placeholder="Digite o nome do grupo avaliado"
                 placeholderTextColor="#999"
                 value={groupName}
                 onChangeText={setGroupName}
-            />
+            /> */}
+            <Picker
+            selectedValue={groupName}
+            style={styles.picker}
+            onValueChange={(itemValue) => setGroupName(itemValue)}
+          >
+            <Picker.Item label="Selecione..." value="" />
+            <Picker.Item label="Grupo 1" value="g1" />
+            <Picker.Item label="Grupo 2" value="g2" />
+            <Picker.Item label="Grupo 3" value="g3" />
+            <Picker.Item label="Grupo 4" value="g4" />
+            <Picker.Item label="Grupo 5" value="g5" />
+            <Picker.Item label="Grupo 6" value="g6" />
+            <Picker.Item label="Grupo 7" value="g7" />
+            <Picker.Item label="Grupo 8" value="g8" />
+            <Picker.Item label="Grupo 9" value="g9" />
+            <Picker.Item label="Grupo 10" value="g10" />
+            <Picker.Item label="Grupo 11" value="g11" />
+            <Picker.Item label="Grupo 12" value="g12" />
+            <Picker.Item label="Grupo 13" value="g13" />
+            <Picker.Item label="Grupo 14" value="g14" />
+            <Picker.Item label="Grupo 15" value="g15" />            
+          </Picker>
         </View>
 
         {/* Lista de critérios */}
