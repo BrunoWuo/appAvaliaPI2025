@@ -240,7 +240,7 @@ export default function App() {
             // Monta o objeto que será salvo no banco (mapeando para a tabela 'avaliacoes')
             const evaluationData = {
               grupo: groupName.trim(),
-              turma: turmaName.trim(),
+              turma: turma.trim(),
               avaliador: profName.trim(),
               criterio1: Number((scores['c1'] ?? 0).toFixed(2)),
               criterio2: Number((scores['c2'] ?? 0).toFixed(2)),
@@ -294,7 +294,7 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="light-content" />
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Avaliação de Projetos</Text>
+        <Text style={styles.headerTitle}>Avaliação Projeto Integador 2025</Text>
       </View>
       
       <ScrollView contentContainerStyle={styles.scrollContent}>
@@ -313,7 +313,7 @@ export default function App() {
           <Text style={styles.cardTitle}>Turma</Text>
           <Picker
             selectedValue={turma}
-            style={styles.input}
+            style={styles.picker}
             onValueChange={(itemValue) => setTurma(itemValue)}
           >
             <Picker.Item label="Selecione..." value="" />
@@ -446,6 +446,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#444',
     borderRadius: 10,
+  },
+  picker: {
+    backgroundColor: '#FFFFFF',
+    color: '#252525',    
+    fontSize: 16,
+    borderWidth: 1,
+    borderColor: '#444',    
   },
   optionsContainer: {
     flexDirection: 'row',
