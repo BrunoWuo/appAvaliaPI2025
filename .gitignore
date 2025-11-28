@@ -1,0 +1,47 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Expo
+.expo/
+.expo-shared/
+
+# VSCode
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build
+/dist/
+/build/
+
+# Misc
+*.swp
+*.swo
+
+# React Native
+android/app/build/
+ios/Pods/
+*.keystore
+
+# SQLite
+*.db
+*.sqlite
+
+# Others
+coverage/
+
+# Expo managed assets
+assets/**/*.db
+assets/**/*.sqlite
